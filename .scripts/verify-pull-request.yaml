@@ -32,8 +32,8 @@ steps:
     autorest-compare --typescript \
                      --spec-path:body-string.json \
                      --spec-path:body-complex.json \
-                     --spec-root-path:/home/daviwil/Projects/Code/autorest.modelerfour/modelerfour/node_modules/@microsoft.azure/autorest.testserver/__files/ \
-                     --output-path:generated/typescript/ \
+                     --spec-root-path:./modelerfour/node_modules/@microsoft.azure/autorest.testserver/__files/ \
+                     --output-path:./generated/typescript/ \
                      --compare-old --package-name:test-package --version:3.0.6192 --use:@autorest/modelerfour@4.2.108 --use:$AUTOREST_TYPESCRIPT \
-                     --compare-new --package-name:test-package --version:3.0.6192 --use:/home/daviwil/Projects/Code/autorest.modelerfour/modelerfour --use:$AUTOREST_TYPESCRIPT
-  displayName: Regression Test: @autorest/typescript
+                     --compare-new --package-name:test-package --version:3.0.6192 --use:./modelerfour --use:$AUTOREST_TYPESCRIPT
+  displayName: Regression Test - @autorest/typescript
