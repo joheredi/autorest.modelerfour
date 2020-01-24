@@ -852,7 +852,7 @@ export class ModelerFour {
       // const opGroup = this.codeModel.
       const memberName = operation['x-ms-client-name'] ?? member;
       const opGroup = this.codeModel.getOperationGroup(group);
-      const op = opGroup.addOperation(new Operation(memberName, this.interpret.getDescription('MISSING·OPERATION-DESCRIPTION', operation), {
+      const op = opGroup.addOperation(new Operation(memberName + "Whoops", this.interpret.getDescription('MISSING·OPERATION-DESCRIPTION', operation), {
         extensions: this.interpret.getExtensionProperties(operation),
         apiVersions: this.interpret.getApiVersions(pathItem),
         language: {
